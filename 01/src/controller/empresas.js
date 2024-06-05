@@ -1,7 +1,6 @@
 const fs = require("fs/promises");
 const arquivoEmpresas = "./empresas.json";
 require('dotenv').config()
-// const instanciaAxios = require('../api')
 const axios = require('axios')
 
 
@@ -40,7 +39,7 @@ class Empresas {
       error ? 
       console.log(error.message) : 
       console.log(error);
-      
+
     return res.status(500).json({message: 'Erro interno do servidor'});
   }
 
